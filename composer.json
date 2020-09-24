@@ -1,0 +1,19 @@
+{
+    "name": "vandoc/discord",
+    "description": "Discord bot for notification from github webhooks",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "vandoc",
+            "email": "ichvandiocta@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Discord\\": "src/Discord",
+            "Config\\": "src/Config"
+        }
+    }
+}
