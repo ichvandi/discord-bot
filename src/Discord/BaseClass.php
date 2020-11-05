@@ -4,7 +4,7 @@ namespace Discord;
 
 use DateTime;
 use DateTimeZone;
-use Config\User;
+use Utils\User;
 
 abstract class BaseClass {
     protected $payload;
@@ -18,7 +18,7 @@ abstract class BaseClass {
     public function sendDiscordWebhooks() {
         $curl = curl_init();
         curl_setopt_array($curl, [
-            CURLOPT_URL => API_URL,
+            CURLOPT_URL => $_ENV['DISCORD_WEBHOOK_URL'],
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => $this->prepareBody(),
             CURLOPT_HTTPHEADER => ['Content-Type: application/json'],

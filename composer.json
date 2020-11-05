@@ -9,11 +9,14 @@
             "email": "ichvandiocta@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "vlucas/phpdotenv": "^5.2"
+    },
     "autoload": {
         "psr-4": {
             "Discord\\": "src/Discord",
-            "Config\\": "src/Config"
+            "Config\\": "src/Config",
+            "Utils\\": "src/Utils"
         }
     }
 }

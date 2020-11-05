@@ -1,7 +1,6 @@
 <?php
 
 require_once __DIR__ .'/vendor/autoload.php';
-require_once './src/Config/Config.php';
 
 use Discord\PRAssigned;
 use Discord\PRClosed;
@@ -9,6 +8,9 @@ use Discord\PRCommit;
 use Discord\PRMerged;
 use Discord\PROpen;
 use Discord\PRReviewed;
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 $payload = json_decode(file_get_contents('php://input'), true);
 
